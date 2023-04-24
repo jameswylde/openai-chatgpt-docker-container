@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#5C5AD7" />
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}" />
+
+  <title>GenieGPT</title>
+  <link rel="stylesheet" type="text/css" href="../static/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    textarea {
+      resize: none;
+      overflow-y: auto;
+    }
+  </style>
+  <script src="{{ url_for('serve_js')}}"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="https://github.com/jameswylde">GenieGPT<span class="beta-text">alpha 0.1.4</span></a>
+    <div class="nav-right">
+      <div class="dark-mode-toggle"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="response-container conversation-element" id="response-container"></div>
+    <div class="input-container conversation-element">
+      <textarea id="input-text" rows="1" placeholder="Ask your question..."></textarea>
+      <div class="submit-api-container">
+        <button type="button" onclick="handleFormSubmit(event)">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+        <button type="button" onclick="clearConversation()">
+          <i class="fas fa-refresh"></i>
+        </button>
+        <div class="api-selector-container">
+          <select id="model-select">
+            <option value="gpt-3.5-turbo">gpt-3.5</option>
+            <option value="gpt-4">gpt-4</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <hr class="footer-line" />
+    <p>
+      <a href="https://github.com/jameswylde" class="footer-link">James Wylde | Github</a>
+    </p>
+  </footer>
+</body>
+
+</html>

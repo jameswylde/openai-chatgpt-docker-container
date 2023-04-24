@@ -1,0 +1,11 @@
+
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      platform: linux/amd64
+    environment:
+      - OPENAI_API_KEY=MY_API_KEY_HERE
+    ports:
+      - "6565:6565"
