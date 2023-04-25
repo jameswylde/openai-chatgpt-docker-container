@@ -2,7 +2,7 @@
 
 ![](https://imgur.com/N01dq3S.png)
 
-![](https://imgur.com/1ERJvH5.png)![](https://imgur.com/xLbN0EU.png)
+![](https://imgur.com/6aIgJhr.png)
 
 Following on from my [openai-chatgpt-terminal](https://github.com/jameswylde/openai-chatgpt-terminal) project to add ChatGPT functionality to my terminal, I wanted something self hosted on my homelab - and can be installed app-like on my phone so moved this project to a container. Simple webapp utilising python's Flask and OpenAI module to provide a simple chat interface; able to choose between different API models (gpt-4,gpt-3.5-turbo), refresh, dark mode and code block formatting and one click copy to clipboard.
 
