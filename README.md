@@ -9,7 +9,7 @@ Following on from my [openai-chatgpt-terminal](https://github.com/jameswylde/ope
 
 ## Pull
 
-The image is on dockerhub to try without building yourself:
+I've published the image on dockerhub to try without building yourself - [dockerhub | jamescwylde/openai-chatgpt-docker](https://hub.docker.com/repository/docker/jamescwylde/openai-chatgpt-docker/general):
 
 - ARM:
 ```
@@ -20,7 +20,7 @@ docker pull jamescwylde/openai-chatgpt-docker:arm
 docker pull jamescwylde/openai-chatgpt-docker:latest
 ```
 
-When running the image, you will need to pass your OpenAI API key as an env variable, `-e OPENAI_API_KEY="API_HERE"`. _i.e_
+Pass your OpenAI API key as an env variable, `-e OPENAI_API_KEY="API_HERE"`. _i.e_
 
 ```
 dcker run -d -p 6565:6565 -e OPENAI_API_KEY="API_HERE" --network vnet jamescwylde/openai-chatgpt-docker:arm
@@ -30,11 +30,18 @@ dcker run -d -p 6565:6565 -e OPENAI_API_KEY="API_HERE" --network vnet jamescwyld
 
 ## Build
 
-If you want to make amendments (my CSS/HTML is horrible as it's not just encouraged but advised), you can build from this repo - tag as you wish. 
+If you want to make amendments (as my CSS/HTML is horrible, it's not just encouraged but advised), you can build from this repo - tag as you wish. 
 
 ```
-docker buildx build --platform linux/amd64 -t jamescwylde/openai-chatgpt-docker:latest .
+git clone https://github.com/jameswylde/openai-chatgpt-docker-container.git
 ```
 ```
-docker run -d -p 6565:6565 -e OPENAI_API_KEY="API_KEY" jamescwylde/openai-chatgpt-docker:latest 
+cd openai-chatgpt-docker-container
+```
+
+```
+docker buildx build --platform linux/amd64 -t yourname/projectname:latest .
+```
+```
+docker run -d -p 6565:6565 -e OPENAI_API_KEY="API_KEY" yourname/projectname:latest 
 ```
