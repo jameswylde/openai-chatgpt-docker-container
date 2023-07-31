@@ -23,7 +23,7 @@ docker pull jamescwylde/openai-chatgpt-docker:latest
 Pass your OpenAI API key as an env variable, `-e OPENAI_API_KEY="API_HERE"`. _i.e_
 
 ```
-dcker run -d -p 6565:6565 -e OPENAI_API_KEY="API_HERE" --network vnet jamescwylde/openai-chatgpt-docker:arm
+docker run -d -p 6565:6565 -e OPENAI_API_KEY="API_HERE" --network vnet jamescwylde/openai-chatgpt-docker:arm
 ```
 
 
