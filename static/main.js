@@ -9,22 +9,6 @@ function escapeHtml(unsafe) {
             .replace(/'/g, "&#039;");
 }
 
-function sanitizeUserInput(input) {
-      return input
-            .replace(/\r\n|\n|\r/g, "\\n")
-            .replace(/\\/g, "\\\\")
-            .replace(/,/g, "\\,")
-            .replace(/:/g, "\\:")
-            .replace(/\{/g, "\\{")
-            .replace(/\}/g, "\\}")
-            .replace(/\[/g, "\\[")
-            .replace(/\]/g, "\\]");
-}
-
-function sanitizeInput(input) {
-      return encodeURIComponent(input);
-}
-
 function handleFormSubmit(event) {
       event.preventDefault();
       const inputText = document.getElementById("input-text").value;

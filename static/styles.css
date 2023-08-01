@@ -4,7 +4,7 @@ body {
   color: #333;
   line-height: 1.6;
   margin: 0;
-  }
+}
 
 body.dark-mode {
   background-color: #1c1c1c;
@@ -12,7 +12,7 @@ body.dark-mode {
 }
 
 .navbar {
-  background: linear-gradient(to right, #5C5AD7, #5C5AD7);
+  background: linear-gradient(to right, #5c5ad7, #5c5ad7);
   color: #fff;
   text-align: left;
   padding: 1rem;
@@ -27,13 +27,12 @@ body.dark-mode {
 }
 
 .beta-text {
-  font-weight: 300; 
+  font-weight: 300;
   margin-left: 5px;
   color: #fff;
-  font-size: 1.0rem;
+  font-size: 1rem;
   text-decoration: none;
 }
-
 
 .nav-right {
   float: right;
@@ -81,7 +80,7 @@ body.dark-mode {
 
 #input-text:focus {
   outline: none;
-  border: 1px solid #760CDA;
+  border: 1px solid #760cda;
   box-shadow: 0 0 3px #000;
 }
 
@@ -92,7 +91,7 @@ body.dark-mode {
 }
 
 button {
-  background: linear-gradient(to right, #5C5AD7, #4142D8);
+  background: linear-gradient(to right, #5c5ad7, #4142d8);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -104,13 +103,13 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to right, #4142D8, #5C5AD7);
-  background-color: #4580D6;
+  background: linear-gradient(to right, #4142d8, #5c5ad7);
+  background-color: #4580d6;
 }
 
 select {
   font-family: "Ubuntu", sans-serif;
-  background: linear-gradient(to right, #5C5AD7, #4142D8);
+  background: linear-gradient(to right, #5c5ad7, #4142d8);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -122,8 +121,8 @@ select {
 }
 
 select:hover {
-  background: linear-gradient(to right, #4142D8, #5C5AD7);
-  background-color: #4580D6;
+  background: linear-gradient(to right, #4142d8, #5c5ad7);
+  background-color: #4580d6;
 }
 
 .response {
@@ -139,9 +138,9 @@ select:hover {
 }
 
 .genie-response {
-  background: linear-gradient(to right, #5C5AD7, #4142D8);
+  background: linear-gradient(to right, #5c5ad7, #4142d8);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  color: #FFF;
+  color: #fff;
 }
 
 .conversation-element {
@@ -154,12 +153,11 @@ select:hover {
 }
 
 .dark-mode-toggle {
-  background-color: #f4f4f4;
-  width: 25px;
+  width: 50px;
   height: 25px;
   cursor: pointer;
-  border-radius: 50%;
-  margin-right: 1rem;
+  border-radius: 25px;
+  background-color: #f4f4f4;
   transition: all 0.5s ease;
   position: relative;
 }
@@ -168,11 +166,10 @@ select:hover {
   content: "";
   display: block;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: 60%;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
   border-radius: 50%;
   background-color: #333;
   transition: all 0.5s ease;
@@ -183,7 +180,7 @@ select:hover {
 }
 
 .dark-mode-toggle.dark::before {
-  transform: translate(50%, -50%);
+  left: 27px;
   background-color: #f4f4f4;
 }
 
@@ -240,7 +237,7 @@ body.dark-mode .footer-link:hover {
   position: absolute;
   top: 0;
   right: 0;
-  background: #4580D6;
+  background: #4580d6;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -251,7 +248,7 @@ body.dark-mode .footer-link:hover {
 }
 
 .copy-code-button:hover {
-  background: linear-gradient(to right, #5C5AD7, #4142D8);
+  background: linear-gradient(to right, #5c5ad7, #4142d8);
 }
 
 .user-response {
@@ -294,14 +291,12 @@ body.dark-mode .code-block {
   color: #f3f3f3;
 }
 
-
 @media (max-width: 900px) {
   .navbar a {
     font-size: 22px;
   }
 
-  .beta-text
-  {
+  .beta-text {
     font-size: 12px;
   }
 
@@ -350,7 +345,8 @@ body.dark-mode .code-block {
     font-size: 14px;
   }
 
-  button, select {
+  button,
+  select {
     font-size: 0.9rem;
     padding: 0.4rem 1rem;
   }
