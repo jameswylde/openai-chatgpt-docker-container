@@ -1,8 +1,6 @@
 ## openai-chatgpt-docker-container
 
-![](https://imgur.com/lylHnag.png)
-
-![](https://imgur.com/y2FtOmQ.png)
+![](https://imgur.com/lylHnag.png)![](https://imgur.com/y2FtOmQ.png)
 
 Following on from my [openai-chatgpt-terminal](https://github.com/jameswylde/openai-chatgpt-terminal) project to add ChatGPT functionality to my terminal, I wanted something self hosted on my homelab - and can be installed app-like on my phone so moved this project to a container. Simple webapp utilising python's Flask and OpenAI module to provide a simple chat interface; able to choose between different API models (gpt-4,gpt-3.5-turbo), refresh, dark mode and code block formatting and one click copy to clipboard.
 
