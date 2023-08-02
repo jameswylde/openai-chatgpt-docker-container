@@ -1,5 +1,14 @@
 body {
   font-family: "Ubuntu", sans-serif;
+  --bg-color: #6852ce;
+  --dot-color: #ffffff;
+  --dot-size: 3px;
+  --dot-space: 22px;
+  background:
+    linear-gradient(90deg, var(--dot-color) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center,
+    linear-gradient(var(--dot-color) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center,
+    var(--bg-color);
+  background-size: var(--dot-space) var(--dot-space);
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
@@ -7,9 +16,19 @@ body {
 }
 
 body.dark-mode {
-  background-color: #1c1c1c;
-  color: #f4f4f4;
+  --bg-color: #a799cc;
+  --dot-color: #1c1c1c;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background:
+    linear-gradient(90deg, var(--dot-color) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center,
+    linear-gradient(var(--dot-color) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center,
+    var(--bg-color);
+  background-size: var(--dot-space) var(--dot-space);
+  background-color: #6a6a6a;
+  color: #333;
 }
+
 
 .navbar {
   background: linear-gradient(to right, #6852ce, #6852ce);
