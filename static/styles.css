@@ -240,7 +240,7 @@ footer {
   border: 0;
   height: 0px;
   background-color: #fff;
-  margin-bottom: 0.5rem;
+  margin-bottom: -10px;
 }
 
 .footer-link {
