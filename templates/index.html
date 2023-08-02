@@ -24,9 +24,9 @@
   <script src="{{ url_for('serve_js')}}"></script>
 </head>
 
-<body>
+<body class="dark-mode">
   <div class="navbar">
-    <a href="https://github.com/jameswylde">GenieGPT<span class="beta-text">alpha 0.1.5</span></a>
+    <a href="https://github.com/jameswylde">GenieGPT<span class="beta-text">alpha 0.1.6</span></a>
     <div class="nav-right">
       <div class="dark-mode-toggle"></div>
     </div>
@@ -45,6 +45,7 @@
         <div class="api-selector-container">
           <select id="model-select">
             <option value="gpt-3.5-turbo">gpt-3.5</option>
+            <option value="gpt-3.5-turbo-16k">gpt-3.5+</option>
             <option value="gpt-4">gpt-4</option>
           </select>
         </div>

@@ -71,7 +71,7 @@ body.dark-mode {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: "Ubuntu", sans-serif;
-  font-size: 0.8rem;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 1em;
   resize: none;
@@ -237,8 +237,8 @@ body.dark-mode .footer-link:hover {
   position: absolute;
   top: 0;
   right: 0;
-  background: #4580d6;
-  color: #fff;
+  background: #eaebec;
+  color: #5b5ad6;
   border: none;
   cursor: pointer;
   font-size: 1rem;
@@ -248,7 +248,7 @@ body.dark-mode .footer-link:hover {
 }
 
 .copy-code-button:hover {
-  background: linear-gradient(to right, #5c5ad7, #4142d8);
+  background: linear-gradient(to right, #ffffff, #ffffff);
 }
 
 .user-response {
@@ -334,7 +334,7 @@ body.dark-mode .code-block {
   .response-container {
     height: 450px;
     max-width: calc(100% - 2rem);
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .input-container {
