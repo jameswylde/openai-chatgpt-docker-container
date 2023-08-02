@@ -76,7 +76,7 @@ function handleFormSubmit(event) {
       console.error(error);
       const genieResponseElement = document.createElement("div");
       genieResponseElement.className = "response genie-response error-response";
-      genieResponseElement.innerHTML = `A: ${error.message}`;
+      genieResponseElement.innerHTML = `Error - ${error.message}`;
       document
         .getElementById("response-container")
         .appendChild(genieResponseElement);
