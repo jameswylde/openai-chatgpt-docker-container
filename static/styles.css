@@ -71,7 +71,7 @@ body.dark-mode {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: "Ubuntu", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   margin-bottom: 1em;
   resize: none;
@@ -132,7 +132,7 @@ select:hover {
   margin-bottom: 1rem;
   max-width: 100%;
   word-wrap: break-word;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: 400;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   position: relative; /* Add position relative for badges */
