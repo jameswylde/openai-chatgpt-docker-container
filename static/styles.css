@@ -107,8 +107,8 @@ body.dark-mode {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: auto; /* Set width to auto to adjust to content */
-  margin-right: -30px; /* Add some margin to adjust the distance from the input box */
+  width: auto;
+  margin-right: -30px;
 }
 
 button {
@@ -156,8 +156,8 @@ select:hover {
   font-size: 14px;
   font-weight: 400;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  position: relative; /* Add position relative for badges */
-  padding-left: 40px; /* Add padding for badges */
+  position: relative;
+  padding-left: 40px;
 }
 
 .response::before {
@@ -273,6 +273,7 @@ body.dark-mode .footer-link:hover {
   padding: 0.5em;
   white-space: pre-wrap;
   font-family: monospace;
+  font-size: 12px;
   overflow: auto;
   max-height: 10em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -380,6 +381,10 @@ body.dark-mode .code-block {
     height: 450px;
     max-width: calc(100% - 2rem);
     font-size: 16px;
+  }
+
+  .code-block {
+    font-size: 10px;
   }
 
   .input-container {
