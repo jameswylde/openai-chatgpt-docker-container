@@ -71,7 +71,7 @@ body.dark-mode {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   margin-bottom: 1em;
   resize: none;
@@ -135,6 +135,30 @@ select:hover {
   font-size: 0.8rem;
   font-weight: 400;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative; /* Add position relative for badges */
+  padding-left: 40px; /* Add padding for badges */
+}
+
+.response::before {
+  content: "Y";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #5c5ad7;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.genie-response::before {
+  content: "G";
+  background-color: #ffffff;
+  color: #5c5ad7;
 }
 
 .genie-response {

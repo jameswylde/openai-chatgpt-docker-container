@@ -21,7 +21,7 @@ function handleFormSubmit(event) {
 
   const userMessageElement = document.createElement("div");
   userMessageElement.className = "response user-response";
-  userMessageElement.innerHTML = `Q: ${formattedInputText}`;
+  userMessageElement.innerHTML = ` ${formattedInputText}`;
   document.getElementById("response-container").appendChild(userMessageElement);
 
   document.getElementById("input-text").value = "";
@@ -58,7 +58,7 @@ function handleFormSubmit(event) {
         }
       );
 
-      genieResponseElement.innerHTML = `A: ${formattedOutputWithCodeBlocks}`;
+      genieResponseElement.innerHTML = ` ${formattedOutputWithCodeBlocks}`;
 
       document
         .getElementById("response-container")
