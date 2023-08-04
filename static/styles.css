@@ -182,7 +182,7 @@ select:hover {
   word-wrap: break-word;
   font-size: 14px;
   font-weight: 400;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.409);
   position: relative;
   padding-left: 40px;
 }
@@ -211,7 +211,7 @@ select:hover {
 
 .genie-response {
   background: linear-gradient(to right, #6852ce, #6852ce);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.409);
   color: #fff;
 }
 
