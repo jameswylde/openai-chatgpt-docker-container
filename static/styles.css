@@ -243,12 +243,12 @@ select:hover {
   width: 21px;
   height: 21px;
   border-radius: 50%;
-  background-color: #333;
+  background-color: #1C1C1C;
   transition: all 0.5s ease;
 }
 
 .dark-mode-toggle.dark {
-  background-color: #333;
+  background-color: #1C1C1C;
 }
 
 .dark-mode-toggle.dark::before {
