@@ -1,8 +1,8 @@
 body {
   font-family: 'Poppins', sans-serif;
-  --bg-color: #6852ce;
+  --bg-color: #833dfc;
   --dot-color: #ffffff;
-  --dot-size: 3px;
+  --dot-size: 4px;
   --dot-space: 22px;
   background:
     linear-gradient(90deg, var(--dot-color) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center,
@@ -152,6 +152,7 @@ button {
 
 button:hover {
   border: 2px solid white; 
+
 }
 
 select {
@@ -290,11 +291,12 @@ body.dark-mode .footer-link:hover {
 .code-block-container {
   position: relative;
   display: inline-block;
+  width: 95%;
 }
 
 .code-block {
-  color: #181818;
-  background-color: #f8f8f8;
+  color: #fff;
+  background-color: #181818;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 0.5em;
@@ -302,26 +304,32 @@ body.dark-mode .footer-link:hover {
   font-family: 'Source Code Pro', monospace;
   font-size: 13px;
   overflow: auto;
-  max-height: 10em;
+  max-height: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 95%;
+  position: relative; 
 }
 
 .copy-code-button {
   position: absolute;
   top: 0;
   right: 0;
-  background: #eaebec;
-  color: #5b5ad6;
-  border: none;
+  width: 35px;
+  background: #6952CE;
+  color: #fff;
   cursor: pointer;
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 8px 8px 8px 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
+  align-items: center;
 }
 
 .copy-code-button:hover {
-  background: linear-gradient(to right, #ffffff, #ffffff);
+  border: 2px solid #fff; 
+  background: #6952CE;
+  color: #fff;
 }
 
 .user-response {
@@ -333,7 +341,7 @@ body.dark-mode .footer-link:hover {
 }
 
 body.dark-mode .response {
-  background-color: #444;
+  background-color: #1C1C1C;
 }
 
 body.dark-mode .user-response {
@@ -345,17 +353,17 @@ body.dark-mode .genie-response {
 }
 
 body.dark-mode .response-container {
-  background-color: #444;
+  background-color: #1C1C1C;
   color: #f4f4f4;
 }
 
 body.dark-mode #input-text {
-  background-color: #444;
+  background-color: #1C1C1C;
   color: #f4f4f4;
 }
 
 body.dark-mode .code-block {
-  background-color: #333;
+  background-color: #1C1C1C;
   color: #fff;
 }
 
@@ -428,3 +436,17 @@ body.dark-mode .code-block {
     padding: 0.4rem 1rem;
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1f1f; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6852ce;
+}
+
+
