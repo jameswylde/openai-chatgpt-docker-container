@@ -463,6 +463,8 @@ body.dark-mode .code-block {
 }
 
 .beta-content {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
   color: #fff;
   background-color: #1C1C1C;
   padding: 20px;
@@ -478,6 +480,7 @@ body.dark-mode .code-block {
 
 .beta-content button {
   font-family: 'Poppins', sans-serif;
+  font-size: 15px;
   background-color: #6852ce;
   color: #fff;
   border: none;
