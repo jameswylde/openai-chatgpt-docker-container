@@ -146,4 +146,19 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.classList.toggle("dark-mode");
       this.classList.toggle("dark");
     });
+
+  const betaPopup = document.getElementById("beta-popup");
+  const acceptBetaButton = document.getElementById("accept-beta");
+
+  const betaAccepted = document.cookie.includes("betaAccepted=true");
+
+  if (!betaAccepted) {
+    betaPopup.style.display = "flex";
+  }
+
+  acceptBetaButton.addEventListener("click", function () {
+    betaPopup.style.display = "none";
+
+    document.cookie = "betaAccepted=true; max-age=2592000";
+  });
 });
