@@ -1,75 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="theme-color" content="#6852ce" />
-  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}" />
-  <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#6852ce" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}" />
 
-  <title>GenieGPT</title>
-  <link rel="stylesheet" type="text/css" href="../static/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
-  <style>
-    textarea {
-      resize: none;
-      overflow-y: auto;
-    }
-  </style>
-  <script src="{{ url_for('serve_js')}}"></script>
-</head>
+    <title>GenieGPT</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+    <style>
+      textarea {
+        resize: none;
+        overflow-y: auto;
+      }
+    </style>
+    <script src="{{ url_for('serve_js')}}"></script>
+  </head>
 
-<div class="beta-popup" id="beta-popup">
-  <div class="beta-content">
-    <p>Thanks for checking out GenieGPT.co.uk. <br><br> GenieGPT was built as a personal project when OpenAI released their gpt-3.5-turbo API. <br> If you're interested in building off it head over to the repo on <a href="https://github.com/jameswylde/openai-chatgpt-docker-container">GitHub</a> <br><br></p>
-    <button id="accept-beta">Got it!</button>
-  </div>
-</div>
-<body class="dark-mode">
-  <div class="navbar">
-    <a href="https://github.com/jameswylde">GenieGPT<span class="beta-text">beta 0.02</span></a>
-    <div class="nav-right">
-      <div class="dark-mode-toggle"></div>
+  <div class="beta-popup" id="beta-popup">
+    <div class="beta-content">
+      <p>Thanks for checking out GenieGPT.co.uk. <br><br> GenieGPT was built as a personal project when OpenAI released their gpt-3.5-turbo API. <br> If you're interested in building off it head over to the repo on <a href="https://github.com/jameswylde/openai-chatgpt-docker-container">GitHub</a> <br><br></p>
+      <button id="accept-beta">Got it!</button>
     </div>
   </div>
-  <div class="container">
-    <div class="response-container conversation-element" id="response-container"></div>
-    <div class="input-container conversation-element">
-      <textarea id="input-text" rows="1" placeholder="Ask your question..."></textarea>
-      <div class="submit-api-container">
-        <button type="button" onclick="handleFormSubmit(event)">
-          <i class="fas fa-paper-plane"></i>
-        </button>
-        <button type="button" onclick="clearConversation()">
-          <i class="fas fa-refresh"></i>
-        </button>
-        <div class="api-selector-container">
-          <select id="model-select">
-            <option value="gpt-3.5-turbo">gpt-3.5</option>
-            <option value="gpt-3.5-turbo-16k">gpt-3.5+</option>
-            <option value="gpt-4">gpt-4</option>
-          </select>
+  <body class="dark-mode">
+    <div class="navbar">
+      <a href="https://github.com/jameswylde">GenieGPT<span class="beta-text">beta 0.02</span></a>
+      <div class="nav-right">
+        <div class="dark-mode-toggle"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="response-container conversation-element" id="response-container"></div>
+      <div class="input-container conversation-element">
+        <textarea id="input-text" rows="1" placeholder="Ask your question..."></textarea>
+        <div class="submit-api-container">
+          <button type="button" onclick="handleFormSubmit(event)">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <button type="button" onclick="clearConversation()">
+            <i class="fas fa-refresh"></i>
+          </button>
+          <button id="temperature-button" class="button">
+            <i class="fa-solid fa-temperature-high"></i>
+          </button>
+          <div id="temperature-popup" class="popup">
+            <div class="popup-content">
+              <span class="close-popup" id="close-popup">&times;</span>
+              <label for="popup-temperature-slider">Model Temperature <br><br> The API accepts a temperature parameter that governs the level of randomness in its responses. <br>For transformation tasks (extraction, standardization, format conversion, grammar fixes) prefer a temperature of 0 or up to 0.3.
+                For writing or creative tasks, closer to 0.5. 
+                If you want GPT to be highly creative, consider values between 0.7 and 1.<br> <br></label>
+              <input
+                type="range"
+                id="popup-temperature-slider"
+                min="0.1"
+                max="0.9"
+                step="0.1"
+              />
+              <div id="popup-temperature-value" class="temperature-value">0.7</div>
+              <button id="apply-popup-temperature" class="small-button">Apply</button>
+            </div>
+          </div>
+                  
+          <div class="api-selector-container">
+            <select id="model-select">
+              <option value="gpt-3.5-turbo">gpt-3.5</option>
+              <option value="gpt-3.5-turbo-16k">gpt-3.5+</option>
+              <option value="gpt-4">gpt-4</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <footer>
-    <hr class="footer-line" />
-    <p>
-      <a href="https://github.com/jameswylde" class="footer-link">James Wylde | Github</a>
-    </p>
-  </footer>
-</body>
+    <footer>
+      <hr class="footer-line" />
+      <p>
+        <a href="https://github.com/jameswylde" class="footer-link">James Wylde | Github</a>
+      </p>
+    </footer>
 
-</html>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1162f18f021f42bbb74b5184746b04f7"}'></script><!-- End Cloudflare Web Analytics -->
+    
+  </body>
+
+  </html>

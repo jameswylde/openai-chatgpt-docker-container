@@ -32,6 +32,7 @@ def serve_js():
 def set_model():
     global current_model
     new_model = request.json.get("model", None)
+    new_temperature = request.json.get("temperature", 0.7)
     if new_model:
         current_model = new_model
         return jsonify({"status": "Model changed"}), 200

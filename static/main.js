@@ -1,9 +1,10 @@
 let conversationHistory = [];
+let temperatureButton;
 
 function escapeHtml(unsafe) {
   return unsafe
     .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
+    .replace(/< /g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
@@ -136,6 +137,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const inputText = document.getElementById("input-text");
   inputText.addEventListener("keypress", handleKeyPress);
 
+  temperatureButton = document.getElementById("temperature-button");
+
   document.body.classList.add("dark-mode");
 
   document.querySelector(".dark-mode-toggle").classList.add("dark");
@@ -160,5 +163,47 @@ document.addEventListener("DOMContentLoaded", function () {
     betaPopup.style.display = "none";
 
     document.cookie = "betaAccepted=true; max-age=2592000";
+  });
+
+  const popup = document.getElementById("temperature-popup");
+  const popupSlider = document.getElementById("popup-temperature-slider");
+  const popupTemperatureValue = document.getElementById("popup-temperature-value");
+  const applyPopupButton = document.getElementById("apply-popup-temperature");
+  const closeButton = document.getElementById("close-popup");
+
+  temperatureButton.addEventListener("click", function () {
+    popup.style.display = "block";
+  });
+
+  closeButton.addEventListener("click", function () {
+    popup.style.display = "none";
+  });
+
+  popupSlider.addEventListener("input", function () {
+    popupTemperatureValue.textContent = popupSlider.value;
+  });
+
+  applyPopupButton.addEventListener("click", function () {
+    const selectedPopupTemperature = parseFloat(popupSlider.value);
+    const selectedModel = modelSelect.options[modelSelect.selectedIndex].value;
+
+    fetch("/api/set_model", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: selectedModel,
+        temperature: selectedPopupTemperature,
+      }),
+    })
+      .then((response) => response.json())
+      .then(() => {
+        const responseContainer = document.getElementById("response-container");
+        responseContainer.innerHTML = "";
+        conversationHistory = [];
+
+        popup.style.display = "none";
+      });
   });
 });

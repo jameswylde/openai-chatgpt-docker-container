@@ -268,7 +268,7 @@ footer {
   border: 0;
   height: 0px;
   background-color: #fff;
-  margin-bottom: -28px;
+  margin-bottom: -10px;
 }
 
 .footer-link {
@@ -496,5 +496,133 @@ body.dark-mode .code-block {
 }
 
 
+#apply-temperature {
+  background: linear-gradient(to right, #6852ce, #6852ce);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 0.4rem 0.8rem;
+  margin-left: 1px;
+  margin-right: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border: 2px solid transparent;
+}
 
 
+button:hover,
+select:hover,
+#apply-temperature:hover {
+  border: 2px solid white;
+}
+
+
+.temperature-slider {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+#temperature {
+  width: 150px;
+  margin-right: 10px;
+}
+
+#temperature-value {
+  margin-top: -50px;
+}
+
+
+#apply-temperature::before {
+  content: " \f2c6 "; 
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding: 0.4rem 0.8rem;
+  margin-left: 1px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.popup {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  position: absolute;
+  background-color: #1C1C1C;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1; 
+  width: 355px; 
+  left: 0; 
+  top: auto; 
+  bottom: 100%; 
+  transform: translateY(57px); 
+}
+.popup-content {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.popup button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+.small-button {
+  font-size: 12px;
+  padding: 5px 10px;
+  background-color: #6852ce;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.small-button:hover {
+  border: 2px solid white;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 75%;
+  height: 10px;
+  background: #6852ce;
+  outline: none;
+  border-radius: 5px;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #443684;
+  border-radius: 50%;
+  cursor: pointer;
+  border-color: #1C1C1C;
+}
+
+#temperature-popup {
+  display: none;
+}
+
+#close-popup {
+  position: absolute;
+  scale: 2.5;
+  top: 0;
+  left: 5px;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#close-popup:hover {
+  color: #6852ce;
+}

@@ -6,14 +6,14 @@ import traceback
 import json
 
 
-def get_chatgpt_response(model_name, messages):
+def get_chatgpt_response(model_name, messages, temperature=0.7):
     try:
         openai.api_key = os.environ.get("OPENAI_API_KEY")
 
         prompt = messages[-1]["content"].rstrip(string.punctuation)
 
         response = openai.ChatCompletion.create(
-            model=model_name, messages=messages, temperature=0.7
+            model=model_name, messages=messages, temperature=temperature
         )
 
         print("Raw API response:", json.dumps(response, indent=2))
@@ -29,3 +29,4 @@ def get_chatgpt_response(model_name, messages):
         print(traceback.format_exc())
 
         return "An error occurred while processing your request."
+
