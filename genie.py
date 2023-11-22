@@ -25,8 +25,8 @@ def get_chatgpt_response(model_name, messages, temperature=0.7):
             return "I'm sorry, but I couldn't generate a response for that question."
 
     except Exception as e:
-        print("Error in ask_question:", e)
+        error_message = str(e)
+        print(f"Error in get_chatgpt_response: {error_message}")
         print(traceback.format_exc())
 
-        return "An error occurred while processing your request."
-
+        return f"Error occurred: {error_message}"
