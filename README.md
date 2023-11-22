@@ -7,7 +7,7 @@ Following on from my [openai-chatgpt-terminal](https://github.com/jameswylde/ope
 
 ## Pull
 
-I've published the image on dockerhub to try without building yourself - [dockerhub | jamescwylde/openai-chatgpt-docker](https://hub.docker.com/repository/docker/jamescwylde/openai-chatgpt-docker/general):
+Pull from dockerhub - [dockerhub | jamescwylde/openai-chatgpt-docker](https://hub.docker.com/repository/docker/jamescwylde/openai-chatgpt-docker/general):
 
 - ARM:
 ```
@@ -28,7 +28,7 @@ docker run -d -p 6565:6565 -e OPENAI_API_KEY="API_HERE" --network vnet jamescwyl
 
 ## Build
 
-If you want to make amendments (as my CSS/HTML is horrible, it's not just encouraged but advised), you can build from this repo - tag as you wish. 
+Change, build and tag: 
 
 ```
 git clone https://github.com/jameswylde/openai-chatgpt-docker-container.git
